@@ -8,3 +8,8 @@ export const productImageUrl = (productId: string, imageId: string) =>
 export const productAddUrl = productSectionUrl + "add/";
 export const productVariantAddUrl = (id: string) =>
   productSectionUrl + id + "/variant/add/";
+
+// Dialog urls
+export const productDeleteUrl = (id: string) => productUrl(id) + "delete/";
+export const productVariantDeleteUrl = (productId: string, variantId: string) =>
+  productVariantUrl(productId, variantId) + "delete/";

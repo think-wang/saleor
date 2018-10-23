@@ -70,22 +70,20 @@ const ProductSection = () => (
   <Switch>
     <Route exact path={productListUrl} component={ProductList} />
     <Route exact path={productAddUrl} component={ProductCreate} />
-    <Route exact path={productUrl(":id")} component={ProductUpdate} />
     <Route
       exact
       path={productVariantAddUrl(":id")}
       component={ProductVariantCreate}
     />
     <Route
-      exact
-      path={productVariantUrl("productId", "variantId")}
+      path={productVariantUrl(":productId", ":variantId")}
       component={ProductVariant}
     />
     <Route
-      exact
       path={productImageUrl(":productId", ":imageId")}
       component={ProductImage}
     />
+    <Route path={productUrl(":id")} component={ProductUpdate} />
   </Switch>
 );
 

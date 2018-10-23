@@ -1,16 +1,22 @@
 import * as React from "react";
+import { Route } from "react-router-dom";
 
-import { productUrl, productVariantUrl } from "../urls";
 import * as placeholderImg from "../../../images/placeholder255x255.png";
 import ErrorMessageCard from "../../components/ErrorMessageCard";
 import Messages from "../../components/messages";
 import Navigator from "../../components/Navigator";
 import i18n from "../../i18n";
 import { decimal, maybe } from "../../misc";
+import ProductVariantDeleteDialog from "../components/ProductVariantDeleteDialog";
 import ProductVariantPage from "../components/ProductVariantPage";
 import ProductVariantOperations from "../containers/ProductVariantOperations";
 import { productVariantQuery, TypedProductVariantQuery } from "../queries";
 import { VariantUpdate } from "../types/VariantUpdate";
+import {
+  productUrl,
+  productVariantDeleteUrl,
+  productVariantUrl
+} from "../urls";
 
 interface ProductUpdateProps {
   variantId: string;
@@ -116,7 +122,6 @@ export const ProductVariant: React.StatelessComponent<ProductUpdateProps> = ({
                             variant ? variant.name || variant.sku : undefined
                           }
                           onBack={handleBack}
-                          onDelete={() => deleteVariant.mutate(variantId)}
                           onImageSelect={handleImageSelect}
                           onSubmit={(data: FormData) => {
                             if (variant) {
@@ -141,7 +146,37 @@ export const ProductVariant: React.StatelessComponent<ProductUpdateProps> = ({
                               )
                             );
                           }}
+                          onDelete={() =>
+                            navigate(
+                              productVariantDeleteUrl(
+                                encodeURIComponent(productId),
+                                encodeURIComponent(variantId)
+                              )
+                            )
+                          }
                         />
+                        <Route
+                          path={productVariantDeleteUrl(
+                            ":productId",
+                            ":variantId"
+                          )}
+                        >
+                          {({ match }) => (
+                            <ProductVariantDeleteDialog
+                              onClose={() =>
+                                navigate(
+                                  productVariantUrl(
+                                    encodeURIComponent(productId),
+                                    encodeURIComponent(variantId)
+                                  )
+                                )
+                              }
+                              open={!!match}
+                              name={maybe(() => data.productVariant.name)}
+                              onConfirm={() => deleteVariant.mutate(variantId)}
+                            />
+                          )}
+                        </Route>
                       </>
                     );
                   }}
