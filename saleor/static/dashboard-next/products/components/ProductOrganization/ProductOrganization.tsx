@@ -4,7 +4,6 @@ import { withStyles } from "@material-ui/core/styles";
 import Typography from "@material-ui/core/Typography";
 import * as React from "react";
 
-import { AttributeType } from "../..";
 import CardTitle from "../../../components/CardTitle";
 import { FormSpacer } from "../../../components/FormSpacer";
 import MultiSelectField from "../../../components/MultiSelectField";
@@ -13,6 +12,7 @@ import SingleSelectField from "../../../components/SingleSelectField";
 import Skeleton from "../../../components/Skeleton";
 import i18n from "../../../i18n";
 import { maybe } from "../../../misc";
+import { AttributeType } from "../../types";
 
 interface ProductType {
   hasVariants: boolean;

@@ -1,12 +1,6 @@
 import { withStyles } from "@material-ui/core/styles";
 import * as React from "react";
 
-import {
-  AttributeType,
-  AttributeValueType,
-  MoneyType,
-  ProductImageType
-} from "../../";
 import { UserError } from "../../..";
 import Container from "../../../components/Container";
 import Form from "../../../components/Form";
@@ -15,6 +9,12 @@ import SaveButtonBar, {
   SaveButtonBarState
 } from "../../../components/SaveButtonBar";
 import Toggle from "../../../components/Toggle";
+import {
+  AttributeType,
+  AttributeValueType,
+  MoneyType,
+  ProductImageType
+} from "../../types";
 import ProductVariantAttributes from "../ProductVariantAttributes";
 import ProductVariantDeleteDialog from "../ProductVariantDeleteDialog";
 import ProductVariantImages from "../ProductVariantImages";

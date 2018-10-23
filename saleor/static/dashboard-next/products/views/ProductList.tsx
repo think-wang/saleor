@@ -1,11 +1,11 @@
 import * as React from "react";
 
-import { productAddUrl, productListUrl, productUrl } from "..";
 import ErrorMessageCard from "../../components/ErrorMessageCard";
 import Navigator from "../../components/Navigator";
 import { createPaginationData, createPaginationState } from "../../misc";
 import ProductListCard from "../components/ProductListCard";
 import { productListQuery, TypedProductListQuery } from "../queries";
+import { productAddUrl, productListUrl, productUrl } from "../urls";
 
 interface ProductListProps {
   params: {

@@ -1,7 +1,6 @@
 import { withStyles } from "@material-ui/core/styles";
 import * as React from "react";
 
-import { AttributeType } from "../../";
 import { UserError } from "../../../";
 import Container from "../../../components/Container";
 import Form from "../../../components/Form";
@@ -11,6 +10,7 @@ import SaveButtonBar, {
 } from "../../../components/SaveButtonBar/SaveButtonBar";
 import SeoForm from "../../../components/SeoForm";
 import i18n from "../../../i18n";
+import { AttributeType } from "../../types";
 import ProductAvailabilityForm from "../ProductAvailabilityForm";
 import ProductDetailsForm from "../ProductDetailsForm";
 import ProductOrganization from "../ProductOrganization";

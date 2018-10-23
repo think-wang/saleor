@@ -5,10 +5,10 @@ import { withStyles } from "@material-ui/core/styles";
 import Typography from "@material-ui/core/Typography";
 import * as React from "react";
 
-import { ProductImageType } from "../..";
 import CardTitle from "../../../components/CardTitle";
 import Skeleton from "../../../components/Skeleton";
 import i18n from "../../../i18n";
+import { ProductImageType } from "../../types";
 
 interface ProductVariantImagesProps {
   images?: ProductImageType[];

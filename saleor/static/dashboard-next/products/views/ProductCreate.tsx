@@ -6,10 +6,10 @@ import Navigator from "../../components/Navigator";
 import i18n from "../../i18n";
 import { decimal } from "../../misc";
 import ProductCreatePage from "../components/ProductCreatePage";
-import { productListUrl, productUrl } from "../index";
 import { TypedProductCreateMutation } from "../mutations";
 import { productCreateQuery, TypedProductCreateQuery } from "../queries";
 import { ProductCreate } from "../types/ProductCreate";
+import { productListUrl, productUrl } from "../urls";
 
 interface ProductUpdateProps {
   id: string;

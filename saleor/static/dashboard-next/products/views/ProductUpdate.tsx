@@ -10,13 +10,13 @@ import { decimal } from "../../misc";
 import { productTypeDetailsUrl } from "../../productTypes";
 import ProductUpdatePage from "../components/ProductUpdatePage";
 import ProductUpdateOperations from "../containers/ProductUpdateOperations";
+import { productDetailsQuery, TypedProductDetailsQuery } from "../queries";
 import {
   productImageUrl,
   productListUrl,
   productVariantAddUrl,
-  productVariantEditUrl
-} from "../index";
-import { productDetailsQuery, TypedProductDetailsQuery } from "../queries";
+  productVariantUrl
+} from "../urls";
 
 interface ProductUpdateProps {
   id: string;
@@ -180,7 +180,7 @@ export const ProductUpdate: React.StatelessComponent<ProductUpdateProps> = ({
                             onVariantAdd={handleVariantAdd}
                             onVariantShow={variantId => () =>
                               navigate(
-                                productVariantEditUrl(
+                                productVariantUrl(
                                   encodeURIComponent(product.id),
                                   encodeURIComponent(variantId)
                                 )

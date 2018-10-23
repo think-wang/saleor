@@ -12,13 +12,13 @@ import Typography from "@material-ui/core/Typography";
 import * as classNames from "classnames";
 import * as React from "react";
 
-import { MoneyType } from "../..";
 import CardTitle from "../../../components/CardTitle";
 import Money from "../../../components/Money";
 import Skeleton from "../../../components/Skeleton";
 import StatusLabel from "../../../components/StatusLabel";
 import i18n from "../../../i18n";
 import { renderCollection } from "../../../misc";
+import { MoneyType } from "../../types";
 
 interface ProductVariantsProps {
   disabled?: boolean;

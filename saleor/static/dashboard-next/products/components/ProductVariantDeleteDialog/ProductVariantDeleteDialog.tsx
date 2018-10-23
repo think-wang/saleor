@@ -22,8 +22,8 @@ const decorate = withStyles(theme => ({
 export interface ProductVariantDeleteDialogProps {
   open: boolean;
   name: string;
-  onClose?();
-  onConfirm?();
+  onClose();
+  onConfirm();
 }
 
 const ProductVariantDeleteDialog = decorate<ProductVariantDeleteDialogProps>(

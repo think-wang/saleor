@@ -1,6 +1,6 @@
 import * as React from "react";
 
-import { productUrl, productVariantEditUrl } from "..";
+import { productUrl, productVariantUrl } from "../urls";
 import * as placeholderImg from "../../../images/placeholder255x255.png";
 import ErrorMessageCard from "../../components/ErrorMessageCard";
 import Messages from "../../components/messages";
@@ -69,7 +69,6 @@ export const ProductVariant: React.StatelessComponent<ProductUpdateProps> = ({
                   {({
                     assignImage,
                     deleteVariant,
-                    errors,
                     updateVariant,
                     unassignImage
                   }) => {
@@ -104,42 +103,46 @@ export const ProductVariant: React.StatelessComponent<ProductUpdateProps> = ({
                     };
 
                     return (
-                      <ProductVariantPage
-                        errors={errors}
-                        saveButtonBarState={formSubmitState}
-                        loading={disableFormSave}
-                        placeholderImage={placeholderImg}
-                        variant={variant}
-                        header={
-                          variant ? variant.name || variant.sku : undefined
-                        }
-                        onBack={handleBack}
-                        onDelete={() => deleteVariant.mutate(variantId)}
-                        onImageSelect={handleImageSelect}
-                        onSubmit={(data: FormData) => {
-                          if (variant) {
-                            updateVariant.mutate({
-                              attributes: data.attributes
-                                ? data.attributes
-                                : null,
-                              costPrice: decimal(data.costPrice),
-                              id: variantId,
-                              priceOverride: decimal(data.priceOverride),
-                              quantity: data.quantity || null,
-                              sku: data.sku,
-                              trackInventory: true // FIXME: missing in UI
-                            });
+                      <>
+                        <ProductVariantPage
+                          errors={maybe(
+                            () => updateVariant.data.productVariantUpdate.errors
+                          )}
+                          saveButtonBarState={formSubmitState}
+                          loading={disableFormSave}
+                          placeholderImage={placeholderImg}
+                          variant={variant}
+                          header={
+                            variant ? variant.name || variant.sku : undefined
                           }
-                        }}
-                        onVariantClick={variantId => {
-                          navigate(
-                            productVariantEditUrl(
-                              encodeURIComponent(productId),
-                              encodeURIComponent(variantId)
-                            )
-                          );
-                        }}
-                      />
+                          onBack={handleBack}
+                          onDelete={() => deleteVariant.mutate(variantId)}
+                          onImageSelect={handleImageSelect}
+                          onSubmit={(data: FormData) => {
+                            if (variant) {
+                              updateVariant.mutate({
+                                attributes: data.attributes
+                                  ? data.attributes
+                                  : null,
+                                costPrice: decimal(data.costPrice),
+                                id: variantId,
+                                priceOverride: decimal(data.priceOverride),
+                                quantity: data.quantity || null,
+                                sku: data.sku,
+                                trackInventory: true // FIXME: missing in UI
+                              });
+                            }
+                          }}
+                          onVariantClick={variantId => {
+                            navigate(
+                              productVariantUrl(
+                                encodeURIComponent(productId),
+                                encodeURIComponent(variantId)
+                              )
+                            );
+                          }}
+                        />
+                      </>
                     );
                   }}
                 </ProductVariantOperations>

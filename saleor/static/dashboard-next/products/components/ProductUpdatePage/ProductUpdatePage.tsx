@@ -2,7 +2,6 @@ import DialogContentText from "@material-ui/core/DialogContentText";
 import { withStyles } from "@material-ui/core/styles";
 import * as React from "react";
 
-import { AttributeType, AttributeValueType, MoneyType } from "../../";
 import { UserError } from "../../../";
 import ActionDialog from "../../../components/ActionDialog";
 import Container from "../../../components/Container";
@@ -14,6 +13,7 @@ import SaveButtonBar, {
 import SeoForm from "../../../components/SeoForm";
 import Toggle from "../../../components/Toggle";
 import i18n from "../../../i18n";
+import { AttributeType, AttributeValueType, MoneyType } from "../../types";
 import { ProductDetails_product_images_edges_node } from "../../types/ProductDetails";
 import ProductAvailabilityForm from "../ProductAvailabilityForm";
 import ProductDetailsForm from "../ProductDetailsForm";

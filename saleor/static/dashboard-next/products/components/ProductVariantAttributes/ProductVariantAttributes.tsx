@@ -3,12 +3,12 @@ import CardContent from "@material-ui/core/CardContent";
 import { withStyles } from "@material-ui/core/styles";
 import * as React from "react";
 
-import { AttributeType } from "../..";
 import CardTitle from "../../../components/CardTitle";
 import { FormSpacer } from "../../../components/FormSpacer";
 import SingleAutocompleteSelectField from "../../../components/SingleAutocompleteSelectField";
 import Skeleton from "../../../components/Skeleton";
 import i18n from "../../../i18n";
+import { AttributeType } from "../../types";
 
 interface ProductVariantAttributesProps {
   attributes?: AttributeType[];

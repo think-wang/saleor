@@ -7,8 +7,8 @@ import { withStyles } from "@material-ui/core/styles";
 import * as classNames from "classnames";
 import * as React from "react";
 
-import { ProductImageType } from "../..";
 import i18n from "../../../i18n";
+import { ProductImageType } from "../../types";
 
 const decorate = withStyles(theme => ({
   image: {

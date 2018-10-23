@@ -1,6 +1,6 @@
 import * as React from "react";
 
-import { productUrl, productVariantEditUrl } from "..";
+import { productUrl, productVariantUrl } from "../urls";
 import ErrorMessageCard from "../../components/ErrorMessageCard";
 import Messages from "../../components/messages";
 import Navigator from "../../components/Navigator";
@@ -54,7 +54,7 @@ export const ProductVariant: React.StatelessComponent<ProductUpdateProps> = ({
                 ) {
                   pushMessage({ text: i18n.t("Product created") });
                   navigate(
-                    productVariantEditUrl(
+                    productVariantUrl(
                       encodeURIComponent(productId),
                       encodeURIComponent(
                         data.productVariantCreate.productVariant.id
@@ -91,7 +91,7 @@ export const ProductVariant: React.StatelessComponent<ProductUpdateProps> = ({
                       });
                     const handleVariantClick = (id: string) =>
                       navigate(
-                        productVariantEditUrl(
+                        productVariantUrl(
                           encodeURIComponent(productId),
                           encodeURIComponent(id)
                         )

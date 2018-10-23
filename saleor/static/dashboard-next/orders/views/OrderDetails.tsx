@@ -6,7 +6,7 @@ import Messages from "../../components/messages";
 import Navigator from "../../components/Navigator";
 import i18n from "../../i18n";
 import { maybe } from "../../misc";
-import { productUrl } from "../../products";
+import { productUrl } from "../../products/urls";
 import { OrderStatus } from "../../types/globalTypes";
 import OrderDetailsPage from "../components/OrderDetailsPage";
 import OrderDraftPage from "../components/OrderDraftPage";

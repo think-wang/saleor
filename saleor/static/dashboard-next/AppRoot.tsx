@@ -33,7 +33,7 @@ import Home from "./icons/Home";
 import Shop from "./icons/Shop";
 import Truck from "./icons/Truck";
 import { removeDoubleSlashes } from "./misc";
-import { productListUrl } from "./products";
+import { productListUrl } from "./products/urls";
 import { PermissionEnum } from './types/globalTypes';
 
 const drawerWidth = 256;

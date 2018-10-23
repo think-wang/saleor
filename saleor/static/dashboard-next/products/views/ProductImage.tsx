@@ -1,6 +1,6 @@
 import * as React from "react";
 
-import { productImageUrl, productUrl } from "..";
+import { productImageUrl, productUrl } from "../urls";
 import Messages from "../../components/messages";
 import Navigator from "../../components/Navigator";
 import ProductImagePage from "../components/ProductImagePage";
@@ -18,7 +18,6 @@ interface ProductImageProps {
 
 export const ProductImage: React.StatelessComponent<ProductImageProps> = ({
   imageId,
-
   productId
 }) => (
   <Messages>

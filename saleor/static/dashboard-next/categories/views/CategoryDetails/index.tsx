@@ -12,7 +12,7 @@ import {
   createPaginationState,
   maybe
 } from "../../../misc";
-import { productAddUrl, productUrl } from "../../../products";
+import { productAddUrl, productUrl } from "../../../products/urls";
 import { CategoryUpdatePage } from "../../components/CategoryUpdatePage/CategoryUpdatePage";
 import {
   TypedCategoryDeleteMutation,
