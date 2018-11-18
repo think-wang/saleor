@@ -2,7 +2,7 @@
 # Copyright (C) 2017 Mirumee Software
 # This file is distributed under the same license as the Saleor package.
 # Mirumee Software <hello@mirumee.com>, 2017.
-# 
+#
 #, fuzzy
 msgid ""
 msgstr ""
@@ -26,17 +26,17 @@ msgstr "电子邮件"
 #: saleor/account/forms.py:86
 msgctxt "Registration error"
 msgid "This email has already been registered."
-msgstr ""
+msgstr "该邮箱已存在"
 
 #: saleor/account/forms.py:93
 msgctxt "Email"
 msgid "Email"
-msgstr ""
+msgstr "电子邮件"
 
 #: saleor/account/forms.py:95
 msgctxt "Password"
 msgid "Password"
-msgstr ""
+msgstr "密码"
 
 #: saleor/account/i18n.py:18
 msgctxt "Address field"
@@ -141,32 +141,32 @@ msgstr ""
 #: saleor/account/i18n.py:63 saleor/account/i18n.py:110
 msgctxt "Country"
 msgid "Country"
-msgstr ""
+msgstr "国家"
 
 #: saleor/account/i18n.py:94
 msgctxt "Personal name"
 msgid "Given name"
-msgstr ""
+msgstr "姓"
 
 #: saleor/account/i18n.py:96
 msgctxt "Personal name"
 msgid "Family name"
-msgstr ""
+msgstr "名"
 
 #: saleor/account/i18n.py:98
 msgctxt "Company or organization"
 msgid "Company or organization"
-msgstr ""
+msgstr "公司或组织"
 
 #: saleor/account/i18n.py:100 saleor/account/i18n.py:102
 msgctxt "Address"
 msgid "Address"
-msgstr ""
+msgstr "地址"
 
 #: saleor/account/i18n.py:104
 msgctxt "City"
 msgid "City"
-msgstr ""
+msgstr "城市"
 
 #: saleor/account/i18n.py:106
 msgctxt "City area"
@@ -186,7 +186,7 @@ msgstr ""
 #: saleor/account/i18n.py:114
 msgctxt "Phone number"
 msgid "Phone number"
-msgstr ""
+msgstr "手机号码"
 
 #: saleor/account/i18n.py:117
 msgctxt "Address"

@@ -41,7 +41,7 @@ ADMINS = (
 )
 MANAGERS = ADMINS
 
-INTERNAL_IPS = get_list(os.environ.get('INTERNAL_IPS', '127.0.0.1'))
+INTERNAL_IPS = get_list(os.environ.get('INTERNAL_IPS', '127.0.0.1','172.17.0.2','www.sslcwxry.top'))
 
 # Some cloud providers (Heroku) export REDIS_URL variable instead of CACHE_URL
 REDIS_URL = os.environ.get('REDIS_URL')
